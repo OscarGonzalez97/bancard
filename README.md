@@ -78,6 +78,10 @@ If you discover any security related issues, please use the issue tracker.
 
 - [Felix Ayala](http://felixaya.la)
 
+## Contributors
+
+- [Oscar Gonzalez](http://oscargonzalez.work/)
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

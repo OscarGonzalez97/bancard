@@ -6,6 +6,10 @@ use Bancard\Http\Client;
 use Bancard\Operations\SingleBuy;
 use Bancard\Operations\SingleBuyConfirmation;
 use Bancard\Operations\SingleBuyRollback;
+use Bancard\Operations\CardsNew;
+use Bancard\Operations\UsersCards;
+use Bancard\Operations\Charge;
+use Bancard\Operations\Delete;
 
 class Bancard extends Client
 {
@@ -129,5 +133,25 @@ class Bancard extends Client
     public function singleBuyRollback($payload)
     {
         return SingleBuyRollback::make($payload);
+    }
+
+    public function cardsNew($payload)
+    {
+        return CardsNew::make($payload);
+    }
+
+    public function usersCards($payload)
+    {
+        return UsersCards::make($payload);
+    }
+
+    public function charge($payload)
+    {
+        return Charge::make($payload);
+    }
+
+    public function delete($payload)
+    {
+        return Delete::make($payload);
     }
 }
