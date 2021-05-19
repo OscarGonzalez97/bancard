@@ -40,9 +40,8 @@ class UsersCards extends Operation
         $this->setEndpoint(str_replace('user_id', $this->payload('user_id'), $this->getEndpoint()));
         return Token::make(
             Bancard::privateKey(),
-            $this->payload('card_id'),
             $this->payload('user_id'),
-            $this->payload('request_new_card'),
+            'request_user_cards',
         );
     }
 }

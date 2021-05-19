@@ -24,7 +24,7 @@ class CardsNew extends Operation
             Bancard::privateKey(),
             $this->payload('card_id'),
             $this->payload('user_id'),
-            $this->payload('request_new_card'),
+            'request_new_card',
         );
     }
 }
