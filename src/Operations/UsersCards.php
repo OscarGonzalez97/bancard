@@ -37,7 +37,6 @@ class UsersCards extends Operation
      */
     public function token()
     {
-        $this->setEndpoint(str_replace('user_id', $this->payload('user_id'), $this->getEndpoint()));
         return Token::make(
             Bancard::privateKey(),
             $this->payload('user_id'),

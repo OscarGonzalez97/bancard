@@ -47,6 +47,9 @@ abstract class Operation
      */
     public function execute()
     {
+        if ($this->endpoint === "/vpos/api/0.3/users/user_id/cards") {
+            $this->setEndpoint(str_replace('user_id', $this->payload('user_id'), $this->endpoint));
+        }
         return (new Bancard)->request($this->method, $this->endpoint, $this->data());
     }
 
