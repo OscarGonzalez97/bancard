@@ -37,12 +37,11 @@ class Delete extends Operation
      */
     public function token()
     {
-        $this->setEndpoint(str_replace('user_id', $this->payload('user_id'), $this->getEndpoint()));
         return Token::make(
             Bancard::privateKey(),
-            $this->payload('delete_card'),
+            'delete_card',
             $this->payload('user_id'),
-            $this->payload('card_token'),
+            $this->payload('alias_token'),
         );
     }
 }

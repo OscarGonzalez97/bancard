@@ -49,6 +49,9 @@ abstract class Operation
     {
         if ($this->endpoint === "/vpos/api/0.3/users/user_id/cards") {
             $this->setEndpoint(str_replace('user_id', $this->payload('user_id'), $this->endpoint));
+            if(array_key_exists('alias_token', $this->payload)) {
+                $this->method = 'DELETE';
+            }
         }
         return (new Bancard)->request($this->method, $this->endpoint, $this->data());
     }
