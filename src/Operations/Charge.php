@@ -23,7 +23,7 @@ class Charge extends Operation
         return Token::make(
             Bancard::privateKey(),
             $this->payload('shop_process_id'),
-            $this->payload('charge'),
+            'charge',
             $this->payload('amount'),
             $this->payload('currency'),
             $this->payload('alias_token'),
